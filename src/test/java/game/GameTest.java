@@ -14,7 +14,7 @@ class GameTest {
 
     @BeforeEach
     void init() {
-        game = new Game();
+        game = Game.getInstance();
     }
 
     @DisplayName("1. Ball 개수 세기 테스트")
