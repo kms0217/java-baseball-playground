@@ -8,12 +8,13 @@ public class Valid {
 
     public Boolean numberValid(String input) {
         String pattern = "^[1-9]{3}";
-        Set<Character> set = new HashSet<Character>() ;
+        Set<Character> set = new HashSet<Character>();
         if (input == null || input.isEmpty() || !Pattern.matches(pattern, input)) {
             return false;
         }
-        for (char ch : input.toCharArray())
+        for (char ch : input.toCharArray()) {
             set.add(ch);
+        }
         return set.size() == 3;
     }
 
