@@ -30,11 +30,4 @@ class GameTest {
     void test_2(String input, int expect) {
         assertThat(game.countStrike(generatedNum, input)).isEqualTo(expect);
     }
-
-    @DisplayName("3. 게임 종료 조건 확인")
-    @ParameterizedTest
-    @CsvSource(value = {"0:false", "1:false", "2:false", "3:true"}, delimiter = ':')
-    void test_3(int strikeNum, int expect) {
-        assertThat(game.checkEnd(strikeNum)).isEqualTo(expect);
-    }
 }
